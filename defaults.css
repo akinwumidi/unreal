@@ -1,1 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Monoton&family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #ec4755;
+    --main-color-dark:rgba(139, 0, 0,0.2);
+    --black-color:#000;
+    --white-color:#fff;
+}
