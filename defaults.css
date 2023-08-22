@@ -8,6 +8,15 @@
 :root{
     --main-color: #ec4755;
     --main-color-dark:rgba(139, 0, 0,0.2);
-    --black-color:#000;
-    --white-color:#fff;
+    --black-color:#000; 
+    --white-color:#fff; 
+}
+
+@keyframes circularMotion {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
