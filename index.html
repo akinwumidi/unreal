@@ -14,20 +14,67 @@
   <body>
     <header>
       <nav>
-        <div class="nav-brand"><span>U</span>nreal</div>
-        <ul class="desktop-links">
-          <li><a href="#">Home</a></li>
-          <li>
-            <a href="#">Games <i class="fa-solid fa-gamepad"></i></a>
-          </li>
-          <li><a href="#">Github </a></li>
-          <a href="#" class="button button-main"
-            >Contact <i class="fa-solid fa-headset"></i
-          ></a>
-        </ul>
+        <div class="nav-desktop">
+          <div class="nav-brand"><span>U</span>nreal</div>
+          <ul class="desktop-links">
+            <li><a href="#">Home</a></li>
+            <li>
+              <a href="#">Games <i class="fa-solid fa-gamepad"></i></a>
+            </li>
+            <li><a href="#">Github </a></li>
+            <a href="#" class="button button-main"
+              >Contact <i class="fa-solid fa-headset"></i
+            ></a>
+          </ul>
+        </div>
+
+        <div class="nav-mobile">
+          <div class="mobile-header">
+            <div class="nav-brand"><span>U</span>nreal</div>
+
+            <div class="navmobile-menu" onclick="hamburgerHandler()">
+              <div class="menu-bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-navigations">
+          <ul class="mobile-links">
+            <li><a href="#">Home</a></li>
+            <li>
+              <a href="#">Games <i class="fa-solid fa-gamepad"></i></a>
+            </li>
+            <li><a href="#">Github </a></li>
+            <a href="#" class="button button-main"
+              >Contact <i class="fa-solid fa-headset"></i
+            ></a>
+          </ul>
+        </div>
       </nav>
+
+      <section class="header-banner">
+        <div class="custom-text1">
+          <span>U</span>
+          <span>N</span>
+          <span>R</span>
+          <span>E</span>
+          <span>A</span>
+          <span>L</span>
+        </div>
+        <!-- <h3 class="custom-text2">The hidden universe to games</h3> -->
+        <!-- <h3 class="custom-text2">The unenging path to games</h3> -->
+        <h3 class="custom-text2">Ready for the road?</h3>
+        <p>
+          Whether you're a fan of survival horror, psychological horror, or jump
+          scares, we've got you covered. Our game reviews provide detailed
+          analysis of gameplay, graphics, story, and more, helping you make
+          informed decisions on which games to play. Enter at your own risk...
+        </p>
+        <img src="./img/compas.svg" alt="spining compas" />
+      </section>
     </header>
     <main></main>
     <footer></footer>
+
+    <script src="main.js"></script>
   </body>
 </html>

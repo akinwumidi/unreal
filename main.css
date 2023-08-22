@@ -3,34 +3,53 @@ body{
 }
 .custom-text1{
     font-family: 'Monoton', cursive;
+    font-size: 68px;
+    font-weight: 100;
+    cursor: pointer;
+    display: flex;
+}
+.custom-text1 span{
+    transition: all 0.3s ease;
+    display: flex;
+    margin: 0 3px;
+}
+.custom-text1 span:hover{
+    font-weight: 700; 
+    color: var(--main-color); 
+    transform: scale(1.1);
+
 }
 .custom-text2{
 font-family: 'East Sea Dokdo', cursive;
+font-size: 80px;
+color: var(--main-color);
+text-size-adjust: auto;
 }
 .button{
+
  padding: 9px 15px;
  border: 1.5px solid transparent;
  border-radius: 8px;
  text-decoration: none;
- border-bottom-width: 3px;
-
-
+ border-bottom-width: 4px;
+ transition: border 0.3s ease; 
 }
 .button i{
     margin-left: 3px;
+    transition: all 0.3s ease;
 }
 .button:hover i{
     margin-left: 8px;
 }
 .button-main{
-    color: var(--white-color);
- background: var(--main-color); 
-}
-.button-main:hover{
     background:var(--main-color-dark);
-    color: var(--main-color);
     border: 1.5px solid var(--main-color);
     border-bottom-width: 3px;
+    color: var(--main-color);
+}
+.button-main:hover{
+    background: var(--main-color); 
+    color: var(--white-color);
 }
 .button-light{
 border: 1.5px solid var(--main-color);
@@ -41,7 +60,7 @@ border: 1.5px solid var(--main-color);
     background: var(--main-color);
     color: var(--white-color);
 }
-nav{
+.nav-desktop{
     display: flex;
     justify-content: space-between;
     background: var(--black-color);
@@ -57,8 +76,8 @@ nav{
 
 }
 .nav-brand span{
-        font-family: 'Monoton', cursive;
-
+    font-family: 'Monoton', cursive;
+    font-weight: 100;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,8 +103,140 @@ nav{
     color: var(--white-color);
     font-size: 18px;
     font-weight: 500;
+    border-bottom: 1.5px solid transparent;
     
 }
 .desktop-links li a:hover{
     border-bottom: 1.5px solid var(--main-color);
+}
+
+
+
+.nav-mobile{
+    display: none;
+    position: relative;
+    z-index: 160;
+}
+.mobile-header{
+    display:flex;
+    background: var(--black-color); 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.mobile-navigations{
+    border-top: 1px solid var(--white-color);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    top: -800%;
+    z-index: 100;
+}
+.show-mobile-navigations{
+    top: 80px;
+    
+}
+.mobile-links{
+    list-style: none;
+padding-bottom: 20px;
+background: var(--black-color);
+}
+.mobile-links li a{
+display: block;
+text-decoration: none;
+padding: 15px 20px;
+color: var(--main-color);
+}
+.mobile-links li a:hover{
+    background: var(--main-color);
+    color: var(--white-color);
+}
+.mobile-links .button{
+    display: inline-block;
+    margin: 20px 0 0 20px;
+}
+
+/*  Hamburger menu starts here */
+.navmobile-menu {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-bar {
+    width: 100%;
+    height: 3px;
+    background: var(--white-color);
+    position: relative;
+}
+
+.menu-bar::before,
+.menu-bar::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: var(--white-color);
+}
+
+.menu-bar::after {
+    transform: translateY(10px);
+}
+
+.menu-bar::before {
+    transform: translatey(-10px);
+
+}
+
+.showMenu .menu-bar {
+    background: transparent;
+}
+
+.showMenu .menu-bar::before {
+    transform: rotate(45deg);
+}
+
+.showMenu .menu-bar::after {
+    transform: rotate(-45deg);
+}
+
+/*  Hamburger menu ends here */
+
+
+
+
+.header-banner{
+    background:  url("./img/header.jpg");
+    background-size: cover;
+    position: relative;
+    background-position: bottom center; 
+    padding: 50px 50px 80px 50px;
+    position: relative;
+    color: var(--white-color);
+    z-index: 10;
+    overflow: hidden;
+} 
+.header-banner p{
+    width: 500px;
+    line-height: 1.7;
+}
+.header-banner img{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    animation: circularMotion 60s infinite linear;
+}
+
+@media (max-width:768px){
+    .nav-desktop{
+        display: none;
+    }
+    .nav-mobile{
+        display: block;
+    }
 }
