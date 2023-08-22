@@ -111,7 +111,19 @@ border: 1.5px solid var(--main-color);
 }
 
 
-
+.backdrop{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    background: var( --main-transparent-gradient);
+    height: 100%;
+    z-index: 80;
+    display: none;
+}
+.show-backdrop{
+    display: block;
+}
 .nav-mobile{
     display: none;
     position: relative;
@@ -129,7 +141,7 @@ border: 1.5px solid var(--main-color);
     position: absolute;
     width: 100%;
     left: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease ;
     top: -800%;
     z-index: 100;
 }
@@ -239,4 +251,20 @@ color: var(--main-color);
     .nav-mobile{
         display: block;
     }
+}
+@media (max-width:568px){
+.header-banner{
+    padding: 50px 20px 80px 20px;
+
+}
+.header-banner p{
+    width: 100%;
+}
+.custom-text1{
+    font-size: 58px;
+}
+.custom-text2{
+    line-height: 0.9;
+    font-size: 68px;
+}
 }
